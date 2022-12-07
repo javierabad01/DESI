@@ -1,0 +1,185 @@
+
+<!--
+    Diseño y Evaluación de Sistemas Interactivos - Curso 2022-2023
+    Javier Abad Hernández
+    --------------------------------------------------------------
+    Página HTML principal (y única) del proyecto
+-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Combustibles</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3-collection.v1.min.js"></script> 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="./js/mainmio.js"></script>
+       
+    <script src="./js/tab1mio.js"></script>
+    
+    <script src="./js/tab2mio.js"></script>
+
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+    <script src="https://unpkg.com/topojson-client@2"></script>
+    <script src="./js/d3-composite-projections.js"></script> 
+
+    <link rel="stylesheet" href="./css/main.css"> 
+</head>
+
+<body>
+    <h1>Datos Precios y Consumos Combustibles</h1>
+    <div id="tabs">
+        <ul>
+            <li><a id="tab1">Diesel Vs Gasolina 95 : Gráfica</a></li>
+            <li><a id="tab2">Mapa España Datos</a></li>
+        </ul>
+    </div>
+    <!-- Tab 1 Line chart -->
+    <div class="container" id="tab1C">
+            <div id="grupo1">
+                <div id="tituloh2"><h2>Diesel Vs Gasolina 95:</h2></div>
+    
+                <div id="serie"></div>
+
+                <div id="texto">
+                    <h5>Sobre los datos</h5>
+                    <p>Se han utilizado los datos correspondientes al dataset: "<a
+                            href="https://www.epdata.es/datos/precio-gasolina-gasoleo-diesel-espana-cifras-datos-estadisticas/420">Comparación precios de Diesel y Gasolina 95 en España </a>" a fecha 7 de diciembre
+                        de 2022, de <a href="https://www.epdata.es/datos/">los EPData.</a></p>
+                    <p>Los precios se reflejan en euros/litro de combustible adquirido.</p>
+                </div>
+            </div>
+            <!-- Selectores de los terminos -->
+            <div id="tabla">
+                <table>
+                    <tr>
+                        <td>
+                            <div id="checksTerminos1" class="selectioncontainer">
+                                <h4 id="leyendaTermino">Términos:</h4>
+                                <ul id="column1" class="column" type="none">
+                                    <li style="color: #12811b;;"><input name="Diesel" type="checkbox" checked />Diesel</li>
+                                    <li style="color:#ff0000;"><input name="Gasolina 95" type="checkbox" checked />Gasolina 95</li>
+                                </ul>
+                            </div>
+                            <div class ="slider-container" id="Slider">
+                                <div class = "value-container">
+                                    <label>Año: </label>
+                                    <span id="actYear">2003</span>
+                                    
+                                    <br><br>
+                                </div>
+                                <input type="range" class= "slider" id="year" max="2022" min="2002" value="2003" list="tickmarks" orient="vertical">
+                                <datalist id="tickmarks">
+                                    <option value="2002" label="- 2002"></option>
+                                    <option value="2003" label="- 2003"></option>
+                                    <option value="2004" label="- 2004"></option>
+                                    <option value="2005" label="- 2005"></option>
+                                    <option value="2006" label="- 2006"></option>
+                                    <option value="2007" label="- 2007"></option>
+                                    <option value="2008" label="- 2008"></option>
+                                    <option value="2009" label="- 2009"></option>
+                                    <option value="2010" label="- 2010"></option>
+                                    <option value="2011" label="- 2011"></option>
+                                    <option value="2012" label="- 2012"></option>
+                                    <option value="2013" label="- 2013"></option>
+                                    <option value="2014" label="- 2014"></option>
+                                    <option value="2015" label="- 2015"></option>
+                                    <option value="2016" label="- 2016"></option>
+                                    <option value="2017" label="- 2017"></option>
+                                    <option value="2018" label="- 2018"></option>
+                                    <option value="2019" label="- 2019"></option>
+                                    <option value="2020" label="- 2020"></option>
+                                    <option value="2021" label="- 2021"></option>
+                                    <option value="2022" label="- 2022"></option>
+                                </datalist>
+                                <br><br>
+                                    <button id="play">►</button>
+                                    <button id="pause">⏸</button>
+                                    <button id="stop">◼</button>      
+    
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>        
+    </div>
+    <!-- Tab 2 Map -->
+    <div class="container" id="tab2C">
+        <h2 id="titulo4">  Mapa de España de Datos</h2>
+        <!-- Selector de terminos -->
+        <div id="selecTerminos">
+            <h5 id="textoTerminoMapa">Dato a mostrar</h5>
+            <select id="radiosTerminos2">  
+                <option value="1" selected="selected">Diesel</option>             
+                <option value="2">Gasolina 95</option>               
+            </select>
+        </div>
+        
+        <div id="grupo4">  
+            <div id="mapa">  
+                <svg width="320" height="200"></svg>
+            </div>
+            </div> 
+        <div id="grupo5">
+            <div id="Slider2">
+                <label id="añoMes">Año: </label>
+                <span id="actYear2">2003</span>
+                <div>
+                    2002 <input type="range"  id="year2" max="2019" min="2002" value="2003"> 2019
+                </div>  
+                <script type="text/javascript" src="./js/slider2.js"></script>
+                <br><br>
+
+                <label id="añoMes">Seleccione el mes:</label>
+                <br>
+                <div>
+                    <input type="radio" id="mes"  name="mes" value="Enero">
+                    <label for="Enero">Enero</label><br>
+                    <input type="radio" id="mes"  name="mes" value="Febrero">
+                    <label for="Febrero">Febrero</label><br>
+                    <input type="radio" id="mes"  name="mes" value="Marzo">
+                    <label for="Marzo">Marzo</label><br>
+                    <input type="radio" id="mes"  name="mes" value="Abril">
+                    <label for="Abril">Abril</label><br>
+                    <input type="radio" id="mes"  name="mes" value="Mayo">
+                    <label for="Mayo">Mayo</label><br>
+                    <input type="radio" id="mes"  name="mes" value="Junio">
+                    <label for="Junio">Junio</label><br>
+                    <input type="radio" id="mes"  name="mes" value="Julio">
+                    <label for="Julio">Julio</label><br>
+                    <input type="radio" id="mes"  name="mes" value="Agosto">
+                    <label for="Agosto">Agosto</label><br>
+                    <input type="radio" id="mes"  name="mes" value="Septiembre">
+                    <label for="Septiembre">Septiembre</label><br>
+                    <input type="radio" id="mes"  name="mes" value="Octubre">
+                    <label for="Octubre">Octubre</label><br>
+                    <input type="radio" id="mes"  name="mes" value="Noviembre">
+                    <label for="Noviembre">Noviembre</label><br>
+                    <input type="radio" id="mes"  name="mes" value="Diciembre" checked="checked">
+                    <label for="Diciembre">Diciembre</label><br>
+                </div>
+            </div>
+        </div> 
+        <h5>Sobre los datos</h5>
+        <p>Se han utilizado los datos correspondientes al dataset: "<a
+            href="https://www.epdata.es/datos/consumo-carburantes-gasolina-gasoleo-espana-estadisticas-datos/326/espana/106">Comparación precios de Diesel y Gasolina 95 en España </a>" a fecha 5 de noviembre
+        de 2022, de <a href="https://www.epdata.es/datos/">los EPData.</a></p>
+    <p>Los precios se reflejan en euros/litro de combustible adquirido.</p>
+
+    </div>
+    <div id="piepagina">
+        <p id="modoOscuro"><input name="oscuro" type="checkbox" unchecked />Activar modo oscuro (no recomendable, afecta
+            negativamente a la percepción)</p>
+            
+        <footer id="footer">
+            <p>&copy; <a href="mailto:javier.abad.hernandez@estudiantes.uva.es">Javier Abad Hernández</a> 2022 · Diseño y Evaluación
+                de Sistemas Interactivos · Grado en Ingeniería Informática · UVa - Creado con <a
+                    href="https://d3js.org/">D3.js</a></p>
+        </footer>
+    </div>
+    
+</body>
+
+</html>
