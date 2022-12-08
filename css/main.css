@@ -104,9 +104,14 @@ div.puntosSerie {
   max-width: 100px;
   max-height: 80px;
   padding: 2px;
-  border:black;
+  border-left: solid black;
+  border-right: solid  black;
+  border-bottom: solid black;
+  border-top: solid black;
+
+  border-width:thin;
+  border-color: black;
   border-radius: 8px;
-  margin-top: -10px;
   font-size: 10px;
   color: black;
   background: white;
