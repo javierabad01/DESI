@@ -10,6 +10,8 @@ Para la visualización, se han han utilizado los datos correspondientes al datas
 # Visualización.
 El proyecto de visualización realmente no va a ser “único”, se va a subdividir en “dos visualizaciones” separadas por pestañas. 
 
+Vamos a ver dos imagenes, una de cada pestaña, tambien se mostrará una en horizontal y otra en vertical, para ver que se adapta a ambos tipos de representaciones.
+
 En la primera pestaña se verá la evolución de precio de los dos combustibles de manera anual en año seleccionado. Sera representado con líneas de diferente color (linechart), el usuario podrá seleccionar el año a representar mediante un slider vertical y tambien se ha implementado mediante botones de "play", "pause" y "stop", la posibilidad de un aumento automatico de cada año por cada 4 segundos.
 
 
