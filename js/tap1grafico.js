@@ -241,7 +241,7 @@ function dibujarGrafico1mio(terminos) {
                 nueva_fecha.setDate(nueva_fecha.getDate() - 6);
                 tooltip.html( mes1===mes2 ?dia+"-"+dia_siguiente+" "+mes1+"<br>" +"Búsqueda "+this.__data__.tipo+": "+ this.__data__.value :dia+" "+mes1+"-"+dia_siguiente+" "+mes2+"<br>" +"Búsqueda "+this.__data__.tipo+": "+this.__data__.value)
                     .style("left", (event.pageX + 10))
-                    .style("top", (event.pageY - 15))
+                    .style("top", (event.pageY + 10))
                     .style("background", COLORES[this.__data__.tipo]);
 
             })
