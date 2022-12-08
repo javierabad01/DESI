@@ -23,3 +23,7 @@ En la segunda, se mostrará un mapa iterativo de España con la cantidad de comb
 <img src="./imagenes/tab2.png">
 
 Se ha implementado un modo oscuro, que representa tonalidades grises oscuras para una menos afectación a la vista, se ha elegido esta tonalidad ya que pese a que afecta negativamente en algún aspecto a la percepción, no lo hace de una forma tan agresiva como si los tonos fueran realmente negros.
+
+Para ver la visualización podeis entrar en este enlace: "<a href= "https://desi_22-23.pages.gitlab.inf.uva.es/preciocombustible"> Precios y consumos combustibles.</a>
+
+
