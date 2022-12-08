@@ -1,4 +1,4 @@
-#### Curso 2022/2023 - DISEÑO Y EVALUACICÓN DE SISTEMAS INTERACTIVOS  
+#### Curso 2022/2023 - DISEÑO Y EVALUACIÓN DE SISTEMAS INTERACTIVOS  
 #### Autor: Javier Abad Hernández
 
 # Consumos y precios del combustible en España.
