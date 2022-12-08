@@ -1,10 +1,12 @@
 
 /*
-Diseño y Evaluación de Sistemas Interactivos - Curso 2021-2022
-Miguel Chaveinte García
+Diseño y Evaluación de Sistemas Interactivos - Curso 2022-2023
+Javier Abad Hernández
+Proyecto de Visualización: Consumo y Precios de Combustibles en España.
 --------------------------------------------------------------
-Archivo de estilos CSS del proyecto
+Estilos CSS del proyecto
 */
+
 /* Descargar tipografía IBM Plex Mono */
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono');
 
@@ -102,12 +104,12 @@ div.puntosSerie {
   max-width: 100px;
   max-height: 80px;
   padding: 2px;
-  border: none;
+  border:black;
   border-radius: 8px;
   margin-top: -10px;
   font-size: 10px;
-  color: white;
-  background: black;
+  color: black;
+  background: white;
   pointer-events: none;
 }
 
